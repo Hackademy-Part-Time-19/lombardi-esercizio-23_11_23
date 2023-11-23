@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var lista1 = []
+        let operazione;
+
+
+
+
+        while (operazione != 7) {
+
+            let operazione = parseInt(prompt("Buonasera, benvenuto nel terminale della Lista Spesa.\n\nPremi 1 per aggiungere un elemento dalla lista \n\nPremi 2 per eliminare un elemento dall lista\n\nPremi 3 per ordinare la lista in ordine alfabetico  \n\n Premi 4 per modificare un elemento dalla lista \n\n Premi 5 per eliminare l intera lista \n\n Premi 6 per Visualizzare la lista \n\n Premi 7 per uscire dall interfaccia"))
+            let elemento;
+            switch (operazione) {
+                case 1:
+
+                    let aggiungiElemento
+                    aggiungiElemento = parseInt(prompt("Premi 1 per aggiungere un elemento \n\n Premi 0 per uscire"))
+                    while (aggiungiElemento != 0) {
+
+
+                        lista1.push(prompt("Elementi da aggiungere"))
+                        aggiungiElemento = parseInt(prompt("Premi 1 per aggiungere un elemento \n\n Premi 0 per uscire"))
+
+                        alert("lista aggiornata :" + " " + lista1)
+
+                    }
+
+                    break;
+
+
+                case 2:
+                    if (lista1 != 0) {
+                        let eliminaElemento
+                        eliminaElemento = parseInt(prompt("Premi 1 per eliminare un elemento \n\n Premi 0 per uscire"))
+                        while (eliminaElemento != 0) {
+
+
+                            lista1.shift(prompt("Primo elemento della lista tolto"))
+                            eliminaElemento = parseInt(prompt("Premi 1 per eliminare un elemento \n\n Premi 0 per uscire"))
+
+                            alert("lista aggiornata :" + " " + lista1)
+
+                        }
+                    }else {
+                        alert("Non ci sono elementi nella lista!")
+                    }
+
+                    break;
+
+
+
+                case 3:
+
+                    if (lista1 != 0) {
+                        let listaOrdinata = lista1.sort()
+                        alert("la lista è stata ordinata in ordine Alfabetico :  " + listaOrdinata)
+                    } else {
+                        alert("Non ci sono elementi nella lista!")
+                    }
+                    break;
+
+                case 4:
+                    if (lista1 != 0) {
+
+
+                        for (let i = 0; i < lista1.length; i++) {
+
+                            let modifica = parseInt(prompt("Premi 1 per modificare questo elemento \n\n Premi 0 per andare avanti"))
+                            if (modifica != 0) {
+                                lista1[i] = prompt("Modifica Elemento")
+
+                                alert("elemento modificato " + lista1)
+                            }
+
+                        }
+                        alert("elemento modificato " + lista1)
+
+                    } else {
+                        alert("Non ci sono elementi nella lista!")
+                    }
+                    break;
+
+
+
+                case 5:
+                    if (lista1 != 0) {
+
+                        lista1.splice(0, lista1.length);
+                        console.log(lista1);
+                        alert("lista eliminata" + lista1)
+
+                    } else {
+                        alert("Non ci sono elementi nella lista!")
+                    }
+                    break;
+
+
+                case 6:
+                    if (lista1 != 0) {
+
+
+                        alert("Ecco la lista :  " + lista1)
+
+                    } else {
+                        alert("Non ci sono elementi nella lista!")
+                    }
+                    break;
+
+
+
+                case 7:
+                    alert("Esecuzione Terminata, torna a trovarci")
+                    break;
+
+
+                default:
+                    alert("l operazione non è supportata")
+                    break;
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
